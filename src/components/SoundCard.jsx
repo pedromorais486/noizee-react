@@ -1,7 +1,7 @@
 import { useAudio } from "react-use";
 import { useEffect } from "react";
 
-const SoundCard = ({ sound }) => {
+const SoundCard = ({ sound, pauseAllSounds }) => {
   const [audio, state, controls] = useAudio({
     src: `/assets/sounds/${sound.filename}.mp3`,
     autoPlay: false,
@@ -9,6 +9,10 @@ const SoundCard = ({ sound }) => {
     preload: 'none',
     type: 'audio/mpeg',
   });
+
+  useEffect(() => {
+    controls.pause();
+  }, [pauseAllSounds])
 
   useEffect(() => {
     controls.volume(.3);
