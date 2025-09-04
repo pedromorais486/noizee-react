@@ -1,6 +1,6 @@
 # Noizee (React Port)
 
-An port of the original Noizee in Vue3 to React, which itself is an opensource alternative to Noisli.
+An port of the original Noizee in Vue3 to React (and also Tailwind, which previously was purely in hand-made CSS), which itself is an opensource alternative to Noisli.
 
 ## Project setup
 Simply use `npm i`.
